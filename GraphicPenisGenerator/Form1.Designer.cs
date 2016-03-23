@@ -40,11 +40,12 @@
             this.btnGenerate.TabIndex = 0;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // labPenis
             // 
             this.labPenis.AutoSize = true;
-            this.labPenis.Location = new System.Drawing.Point(118, 60);
+            this.labPenis.Location = new System.Drawing.Point(105, 60);
             this.labPenis.Name = "labPenis";
             this.labPenis.Size = new System.Drawing.Size(27, 13);
             this.labPenis.TabIndex = 1;
