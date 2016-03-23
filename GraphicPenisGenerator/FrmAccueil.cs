@@ -16,6 +16,10 @@ namespace GraphicPenisGenerator
         {
             InitializeComponent();
         }
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private string size;
         private int sizeP;
@@ -43,5 +47,7 @@ namespace GraphicPenisGenerator
                 grpBoxChoice.Visible = false;
             }
         }
+
+
     }
 }

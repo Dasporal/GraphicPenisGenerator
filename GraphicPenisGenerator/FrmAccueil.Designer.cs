@@ -35,6 +35,7 @@
             this.radMin = new System.Windows.Forms.RadioButton();
             this.radSec = new System.Windows.Forms.RadioButton();
             this.chkGen = new System.Windows.Forms.CheckBox();
+            this.btnQuit = new System.Windows.Forms.Button();
             this.grpBoxChoixGen.SuspendLayout();
             this.grpBoxChoice.SuspendLayout();
             this.SuspendLayout();
@@ -115,11 +116,22 @@
             this.chkGen.UseVisualStyleBackColor = true;
             this.chkGen.CheckedChanged += new System.EventHandler(this.chkGen_CheckedChanged);
             // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(12, 93);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 3;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // FrmAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 175);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.grpBoxChoixGen);
             this.Controls.Add(this.labPenis);
             this.Controls.Add(this.btnGenerate);
@@ -143,6 +155,7 @@
         private System.Windows.Forms.RadioButton radMin;
         private System.Windows.Forms.RadioButton radSec;
         private System.Windows.Forms.CheckBox chkGen;
+        private System.Windows.Forms.Button btnQuit;
     }
 }
 
