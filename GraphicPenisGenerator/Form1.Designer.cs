@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.labPenis = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(97, 12);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerate.TabIndex = 0;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            // 
+            // labPenis
+            // 
+            this.labPenis.AutoSize = true;
+            this.labPenis.Location = new System.Drawing.Point(118, 60);
+            this.labPenis.Name = "labPenis";
+            this.labPenis.Size = new System.Drawing.Size(27, 13);
+            this.labPenis.TabIndex = 1;
+            this.labPenis.Text = "8=D";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 111);
+            this.Controls.Add(this.labPenis);
+            this.Controls.Add(this.btnGenerate);
+            this.Name = "Form1";
+            this.Text = "Graphic Penis Generator";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.Label labPenis;
     }
 }
 
