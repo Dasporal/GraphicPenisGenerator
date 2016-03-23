@@ -16,5 +16,20 @@ namespace GraphicPenisGenerator
         {
             InitializeComponent();
         }
+
+        private string size;
+        private int sizeP;
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            Random sizePenis = new Random();
+            sizeP = sizePenis.Next(1,15);
+            for(int i=0;i<sizeP;i++)
+            {
+                size += "=";
+            }
+            labPenis.Text = "";
+            labPenis.Text = "8" + size + "D";
+            size = "";
+        }
     }
 }
