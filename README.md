@@ -4,4 +4,4 @@
 
 ## If you insist. (but it's not the final version *yet*.)
 
-![penisGIF](https://raw.githubusercontent.com/Dasporal/GraphicPenisGenerator/dev/ressources/penis.gif)
+![penisGIF](https://raw.githubusercontent.com/Dasporal/GraphicPenisGenerator/master/ressources/penis.gif)
