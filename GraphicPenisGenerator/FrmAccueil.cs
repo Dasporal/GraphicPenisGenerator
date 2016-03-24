@@ -20,18 +20,11 @@ namespace GraphicPenisGenerator
         {
             Application.Exit();
         }
-
         private string size;
-        private int sizeP;
+        Generator Gen = new Generator(0,"");
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            Random sizePenis = new Random();
-            sizeP = sizePenis.Next(1,15);
-            for(int i=0;i<sizeP;i++)
-            {
-                size += "=";
-            }
-            labPenis.Text = "";
+            size = Gen.sizeD(Gen.setSize(0));
             labPenis.Text = "8" + size + "D";
             size = "";
         }
@@ -48,6 +41,9 @@ namespace GraphicPenisGenerator
             }
         }
 
-
+        private void radSec_CheckedChanged(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

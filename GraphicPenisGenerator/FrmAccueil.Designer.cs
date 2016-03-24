@@ -53,11 +53,11 @@
             // labPenis
             // 
             this.labPenis.AutoSize = true;
-            this.labPenis.Location = new System.Drawing.Point(116, 146);
+            this.labPenis.Location = new System.Drawing.Point(78, 150);
             this.labPenis.Name = "labPenis";
-            this.labPenis.Size = new System.Drawing.Size(27, 13);
+            this.labPenis.Size = new System.Drawing.Size(121, 13);
             this.labPenis.TabIndex = 1;
-            this.labPenis.Text = "8=D";
+            this.labPenis.Text = "Waiting to be generated";
             // 
             // grpBoxChoixGen
             // 
@@ -104,6 +104,7 @@
             this.radSec.Tag = "";
             this.radSec.Text = "Second";
             this.radSec.UseVisualStyleBackColor = true;
+            this.radSec.CheckedChanged += new System.EventHandler(this.radSec_CheckedChanged);
             // 
             // chkGen
             // 
