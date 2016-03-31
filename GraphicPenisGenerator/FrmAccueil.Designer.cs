@@ -39,13 +39,14 @@
             this.btnQuit = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.radMs = new System.Windows.Forms.RadioButton();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpBoxChoixGen.SuspendLayout();
             this.grpBoxChoice.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(12, 53);
+            this.btnGenerate.Location = new System.Drawing.Point(12, 25);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnGenerate.TabIndex = 0;
@@ -150,11 +151,22 @@
             this.radMs.UseVisualStyleBackColor = true;
             this.radMs.CheckedChanged += new System.EventHandler(this.radMs_CheckedChanged);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(12, 59);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FrmAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 175);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.grpBoxChoixGen);
             this.Controls.Add(this.labPenis);
@@ -182,6 +194,7 @@
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.RadioButton radMs;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

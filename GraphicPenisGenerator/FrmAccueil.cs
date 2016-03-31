@@ -33,18 +33,19 @@ namespace GraphicPenisGenerator
             if (chkGen.Checked== true)
             {
                 grpBoxChoice.Visible = true;
+                btnGenerate.Enabled = false;
             }
             if (chkGen.Checked == false)
             {
                 grpBoxChoice.Visible = false;
                 timer.Enabled = false;
+                btnGenerate.Enabled = true;
             }
         }
         private void radMs_CheckedChanged(object sender, EventArgs e)
         {
             if (radMs.Checked == true)
-            {
-                btnGenerate.Enabled = false;
+            {  
                 timer.Interval = 100;
                 timer.Start();
                 if (timer.Equals(timer.Interval))
@@ -57,8 +58,7 @@ namespace GraphicPenisGenerator
         private void radSec_CheckedChanged(object sender, EventArgs e)
         {
             if (radSec.Checked == true)
-            {
-                btnGenerate.Enabled = false;
+            {   
                 timer.Interval = 1000;
                 timer.Enabled = true;
                 timer.Start();
@@ -74,7 +74,6 @@ namespace GraphicPenisGenerator
         {
             if (radMin.Checked == true)
             {
-                btnGenerate.Enabled = false;
                 timer.Interval = 60000;
                 timer.Start();
                 if (timer.Equals(timer.Interval))
@@ -85,5 +84,9 @@ namespace GraphicPenisGenerator
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            labPenis.Text = "Cleared, regenerate me!";
+        }
     }
 }
