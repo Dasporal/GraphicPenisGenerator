@@ -16,21 +16,24 @@ namespace GraphicPenisGenerator
             this.sizeP = sizeP;
             this.size = size;
         }
-        public int setSize(int sizeP)
+        public int setSize()
         {
             return sizePenis.Next(1, 15);
         }
         public string sizeD(int sizeP)
         {
             for (int i = 0; i < sizeP; i++)
-            {
                 size += "=";
-            }
+            
             return size;
         }
-        public string clear(string size)
+        public string clear()
         {
             return size = "";
+        }
+        public string generatedPenis(string sizeD)
+        {
+            return "8" + sizeD + "D";
         }
 
     }

@@ -24,9 +24,10 @@ namespace GraphicPenisGenerator
         Generator Gen = new Generator(0,"");
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            size = Gen.sizeD(Gen.setSize(0));
-            labPenis.Text = "8" + size + "D";
-            size = "";
+            //labPenis.Text = " ";
+            size = Gen.sizeD(Gen.setSize());
+            labPenis.Text = Gen.generatedPenis(size);
+            Gen.clear();
         }
 
         private void chkGen_CheckedChanged(object sender, EventArgs e)
