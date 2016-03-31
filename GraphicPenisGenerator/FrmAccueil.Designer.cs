@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.labPenis = new System.Windows.Forms.Label();
             this.grpBoxChoixGen = new System.Windows.Forms.GroupBox();
@@ -36,6 +37,8 @@
             this.radSec = new System.Windows.Forms.RadioButton();
             this.chkGen = new System.Windows.Forms.CheckBox();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.timerSecond = new System.Windows.Forms.Timer(this.components);
+            this.timerMinute = new System.Windows.Forms.Timer(this.components);
             this.grpBoxChoixGen.SuspendLayout();
             this.grpBoxChoice.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +130,14 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // timerSecond
+            // 
+            this.timerSecond.Interval = 1000;
+            // 
+            // timerMinute
+            // 
+            this.timerMinute.Interval = 60000;
+            // 
             // FrmAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +168,8 @@
         private System.Windows.Forms.RadioButton radSec;
         private System.Windows.Forms.CheckBox chkGen;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Timer timerSecond;
+        private System.Windows.Forms.Timer timerMinute;
     }
 }
 
