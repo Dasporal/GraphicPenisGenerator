@@ -33,12 +33,12 @@
             this.labPenis = new System.Windows.Forms.Label();
             this.grpBoxChoixGen = new System.Windows.Forms.GroupBox();
             this.grpBoxChoice = new System.Windows.Forms.GroupBox();
+            this.radMs = new System.Windows.Forms.RadioButton();
             this.radMin = new System.Windows.Forms.RadioButton();
             this.radSec = new System.Windows.Forms.RadioButton();
             this.chkGen = new System.Windows.Forms.CheckBox();
             this.btnQuit = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.radMs = new System.Windows.Forms.RadioButton();
             this.btnClear = new System.Windows.Forms.Button();
             this.grpBoxChoixGen.SuspendLayout();
             this.grpBoxChoice.SuspendLayout();
@@ -85,6 +85,19 @@
             this.grpBoxChoice.TabIndex = 1;
             this.grpBoxChoice.TabStop = false;
             this.grpBoxChoice.Visible = false;
+            // 
+            // radMs
+            // 
+            this.radMs.AutoSize = true;
+            this.radMs.Location = new System.Drawing.Point(6, 9);
+            this.radMs.Name = "radMs";
+            this.radMs.Size = new System.Drawing.Size(77, 17);
+            this.radMs.TabIndex = 2;
+            this.radMs.TabStop = true;
+            this.radMs.Tag = "";
+            this.radMs.Text = "Millisecond";
+            this.radMs.UseVisualStyleBackColor = true;
+            this.radMs.CheckedChanged += new System.EventHandler(this.radMs_CheckedChanged);
             // 
             // radMin
             // 
@@ -138,19 +151,6 @@
             this.timer.Interval = 1;
             this.timer.Tick += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // radMs
-            // 
-            this.radMs.AutoSize = true;
-            this.radMs.Location = new System.Drawing.Point(6, 9);
-            this.radMs.Name = "radMs";
-            this.radMs.Size = new System.Drawing.Size(77, 17);
-            this.radMs.TabIndex = 2;
-            this.radMs.TabStop = true;
-            this.radMs.Tag = "";
-            this.radMs.Text = "Millisecond";
-            this.radMs.UseVisualStyleBackColor = true;
-            this.radMs.CheckedChanged += new System.EventHandler(this.radMs_CheckedChanged);
-            // 
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(12, 59);
@@ -165,12 +165,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(296, 175);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.grpBoxChoixGen);
             this.Controls.Add(this.labPenis);
             this.Controls.Add(this.btnGenerate);
+            this.MaximizeBox = false;
             this.Name = "FrmAccueil";
             this.Text = "Graphic Penis Generator";
             this.grpBoxChoixGen.ResumeLayout(false);
