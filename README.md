@@ -2,6 +2,6 @@
 
 ... Do you really need one ?
 
-## If you insist. (but it's not the final version *yet*.)
+## If you insist. But that's just spoiling the fun. :(
 
-![penisGIF](https://raw.githubusercontent.com/Dasporal/GraphicPenisGenerator/master/ressources/penis.gif)
+![penisGIF](/ressources/penis3.gif)
