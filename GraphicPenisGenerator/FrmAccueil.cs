@@ -37,12 +37,53 @@ namespace GraphicPenisGenerator
             if (chkGen.Checked == false)
             {
                 grpBoxChoice.Visible = false;
+                timer.Enabled = false;
+            }
+        }
+        private void radMs_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radMs.Checked == true)
+            {
+                btnGenerate.Enabled = false;
+                timer.Interval = 100;
+                timer.Start();
+                if (timer.Equals(timer.Interval))
+                {
+                    labPenis.Text = Gen.generatedPenis(Gen.sizeD(Gen.setSize()));
+                    Gen.clear();
+                }
+            }
+        }
+        private void radSec_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radSec.Checked == true)
+            {
+                btnGenerate.Enabled = false;
+                timer.Interval = 1000;
+                timer.Enabled = true;
+                timer.Start();
+                if (timer.Equals(timer.Interval))
+                {
+                    labPenis.Text = Gen.generatedPenis(Gen.sizeD(Gen.setSize()));
+                    Gen.clear();
+                }
             }
         }
 
-        private void radSec_CheckedChanged(object sender, EventArgs e)
+        private void radMin_CheckedChanged(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (radMin.Checked == true)
+            {
+                btnGenerate.Enabled = false;
+                timer.Interval = 60000;
+                timer.Start();
+                if (timer.Equals(timer.Interval))
+                {
+                    labPenis.Text = Gen.generatedPenis(Gen.sizeD(Gen.setSize()));
+                    Gen.clear();
+                }
+            }
         }
+
     }
 }

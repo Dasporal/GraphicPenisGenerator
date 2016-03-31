@@ -35,7 +35,6 @@ namespace GraphicPenisGenerator
         {
             return "8" + sizeD + "D";
         }
-
     }
 }
 

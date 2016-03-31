@@ -37,8 +37,8 @@
             this.radSec = new System.Windows.Forms.RadioButton();
             this.chkGen = new System.Windows.Forms.CheckBox();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.timerSecond = new System.Windows.Forms.Timer(this.components);
-            this.timerMinute = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.radMs = new System.Windows.Forms.RadioButton();
             this.grpBoxChoixGen.SuspendLayout();
             this.grpBoxChoice.SuspendLayout();
             this.SuspendLayout();
@@ -68,18 +68,19 @@
             this.grpBoxChoixGen.Controls.Add(this.chkGen);
             this.grpBoxChoixGen.Location = new System.Drawing.Point(123, 12);
             this.grpBoxChoixGen.Name = "grpBoxChoixGen";
-            this.grpBoxChoixGen.Size = new System.Drawing.Size(149, 119);
+            this.grpBoxChoixGen.Size = new System.Drawing.Size(149, 125);
             this.grpBoxChoixGen.TabIndex = 2;
             this.grpBoxChoixGen.TabStop = false;
             this.grpBoxChoixGen.Text = "Generate a penis each";
             // 
             // grpBoxChoice
             // 
+            this.grpBoxChoice.Controls.Add(this.radMs);
             this.grpBoxChoice.Controls.Add(this.radMin);
             this.grpBoxChoice.Controls.Add(this.radSec);
             this.grpBoxChoice.Location = new System.Drawing.Point(7, 41);
             this.grpBoxChoice.Name = "grpBoxChoice";
-            this.grpBoxChoice.Size = new System.Drawing.Size(136, 72);
+            this.grpBoxChoice.Size = new System.Drawing.Size(136, 78);
             this.grpBoxChoice.TabIndex = 1;
             this.grpBoxChoice.TabStop = false;
             this.grpBoxChoice.Visible = false;
@@ -87,7 +88,7 @@
             // radMin
             // 
             this.radMin.AutoSize = true;
-            this.radMin.Location = new System.Drawing.Point(7, 43);
+            this.radMin.Location = new System.Drawing.Point(6, 55);
             this.radMin.Name = "radMin";
             this.radMin.Size = new System.Drawing.Size(57, 17);
             this.radMin.TabIndex = 1;
@@ -95,11 +96,12 @@
             this.radMin.Tag = "";
             this.radMin.Text = "Minute";
             this.radMin.UseVisualStyleBackColor = true;
+            this.radMin.CheckedChanged += new System.EventHandler(this.radMin_CheckedChanged);
             // 
             // radSec
             // 
             this.radSec.AutoSize = true;
-            this.radSec.Location = new System.Drawing.Point(7, 20);
+            this.radSec.Location = new System.Drawing.Point(6, 32);
             this.radSec.Name = "radSec";
             this.radSec.Size = new System.Drawing.Size(62, 17);
             this.radSec.TabIndex = 0;
@@ -130,13 +132,23 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // timerSecond
+            // timer
             // 
-            this.timerSecond.Interval = 1000;
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // timerMinute
+            // radMs
             // 
-            this.timerMinute.Interval = 60000;
+            this.radMs.AutoSize = true;
+            this.radMs.Location = new System.Drawing.Point(6, 9);
+            this.radMs.Name = "radMs";
+            this.radMs.Size = new System.Drawing.Size(77, 17);
+            this.radMs.TabIndex = 2;
+            this.radMs.TabStop = true;
+            this.radMs.Tag = "";
+            this.radMs.Text = "Millisecond";
+            this.radMs.UseVisualStyleBackColor = true;
+            this.radMs.CheckedChanged += new System.EventHandler(this.radMs_CheckedChanged);
             // 
             // FrmAccueil
             // 
@@ -168,8 +180,8 @@
         private System.Windows.Forms.RadioButton radSec;
         private System.Windows.Forms.CheckBox chkGen;
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Timer timerSecond;
-        private System.Windows.Forms.Timer timerMinute;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.RadioButton radMs;
     }
 }
 
